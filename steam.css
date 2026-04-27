@@ -1,37 +1,39 @@
 :root {
-    /* The main accent color and the matching text value */
-    --adw-accent-bg-rgb: 66, 190, 101 !important;
+    /* accent — interactive blue */
+    --adw-accent-bg-rgb: 120, 169, 255 !important;
     --adw-accent-fg-rgb: 22, 22, 22 !important;
-    --adw-accent-rgb: 66, 190, 101 !important;
+    --adw-accent-rgb: 120, 169, 255 !important;
 
-	/* destructive-action buttons */
-    --adw-destructive-bg-rgb: 61, 219, 217 !important;
-    --adw-destructive-fg-rgb: 242, 244, 248 !important;
-    --adw-destructive-rgb: 61, 219, 217 !important;
+    /* destructive */
+    --adw-destructive-bg-rgb: 255, 126, 182 !important;
+    --adw-destructive-fg-rgb: 22, 22, 22 !important;
+    --adw-destructive-rgb: 255, 126, 182 !important;
 
-	/* Levelbars, entries, labels and infobars. These don't need text colors */
-    --adw-success-bg-rgb: 51, 177, 255 !important;
+    /* success */
+    --adw-success-bg-rgb: 66, 190, 101 !important;
     --adw-success-fg-rgb: 22, 22, 22 !important;
-    --adw-success-rgb: 51, 177, 255 !important;
+    --adw-success-rgb: 66, 190, 101 !important;
 
-    --adw-warning-bg-rgb: 57, 57, 57 !important;
+    /* warning */
+    --adw-warning-bg-rgb: 238, 83, 150 !important;
     --adw-warning-fg-rgb: 22, 22, 22 !important;
     --adw-warning-fg-a: 0.8 !important;
-    --adw-warning-rgb: 57, 57, 57 !important;
+    --adw-warning-rgb: 238, 83, 150 !important;
 
-    --adw-error-bg-rgb: 61, 219, 217 !important;
+    /* error */
+    --adw-error-bg-rgb: 255, 126, 182 !important;
     --adw-error-fg-rgb: 22, 22, 22 !important;
-    --adw-error-rgb: 61, 219, 217 !important;
+    --adw-error-rgb: 255, 126, 182 !important;
 
-	/* Window */
+    /* window */
     --adw-window-bg-rgb: 22, 22, 22 !important;
     --adw-window-fg-rgb: 242, 244, 248 !important;
 
-	/* Views - e.g. text view or tree view */
+    /* views */
     --adw-view-bg-rgb: 22, 22, 22 !important;
     --adw-view-fg-rgb: 242, 244, 248 !important;
 
-	/* Header bar, search bar, tab bar */
+    /* headerbar */
     --adw-headerbar-bg-rgb: 22, 22, 22 !important;
     --adw-headerbar-fg-rgb: 242, 244, 248 !important;
     --adw-headerbar-border-rgb: 82, 82, 82 !important;
@@ -41,7 +43,7 @@
     --adw-headerbar-darker-shade-rgb: 0, 0, 0 !important;
     --adw-headerbar-darker-shade-a: 0.9 !important;
 
-	/* Split pane views */
+    /* sidebar */
     --adw-sidebar-bg-rgb: 22, 22, 22 !important;
     --adw-sidebar-fg-rgb: 242, 244, 248 !important;
     --adw-sidebar-backdrop-rgb: 82, 82, 82 !important;
@@ -53,27 +55,62 @@
     --adw-secondary-sidebar-shade-rgb: 0, 0, 0 !important;
     --adw-secondary-sidebar-shade-a: 0.36 !important;
 
-	/* Cards, boxed lists */
-    --adw-card-bg-rgb: 255, 255, 255 !important;
-    --adw-card-bg-a: 0.08 !important;
-    --adw-card-fg-rgb: 255, 255, 255 !important;
+    /* cards */
+    --adw-card-bg-rgb: 38, 38, 38 !important;
+    --adw-card-bg-a: 1.0 !important;
+    --adw-card-fg-rgb: 242, 244, 248 !important;
     --adw-card-shade-rgb: 0, 0, 0 !important;
     --adw-card-shade-a: 0.36 !important;
 
-	/* Dialogs */
+    /* dialogs */
     --adw-dialog-bg-rgb: 22, 22, 22 !important;
     --adw-dialog-fg-rgb: 242, 244, 248 !important;
 
-    /* Popovers */
-    --adw-popover-bg-rgb: 22, 22, 22 !important;
+    /* popovers */
+    --adw-popover-bg-rgb: 38, 38, 38 !important;
     --adw-popover-fg-rgb: 242, 244, 248 !important;
     --adw-popover-shade-rgb: 0, 0, 0 !important;
     --adw-popover-shade-a: 0.36 !important;
 
-	/* Thumbnails */
+    /* thumbnails */
     --adw-thumbnail-bg-rgb: 22, 22, 22 !important;
 
-	/* Miscellaneous */
+    /* misc */
     --adw-shade-rgb: 0, 0, 0 !important;
     --adw-shade-a: 0.36 !important;
+}
+
+/* Carbon structural overrides — square corners, flat shadows, Carbon easing, IBM Plex font */
+:root {
+    /* radius — all zero */
+    --adw-button-radius: 0 !important;
+    --adw-button-pill-radius: 0 !important;
+    --adw-card-radius: 0 !important;
+    --adw-entry-radius: 0 !important;
+    --adw-entry-small-radius: 0 !important;
+    --adw-dialog-radius: 0 !important;
+    --adw-alert-dialog-radius: 0 !important;
+    --adw-alert-dialog-button-radius: 0 !important;
+
+    /* shadows — no decorative glow, only depth */
+    --adw-card-shadow:
+        0 0 0 1px rgba(82, 82, 82, 0.4) !important;
+    --adw-card-raised-shadow:
+        0 0 0 1px rgba(82, 82, 82, 0.6),
+        0 2px 8px rgba(0, 0, 0, 0.5) !important;
+    --adw-dialog-shadow:
+        0 0 0 1px rgba(82, 82, 82, 0.4),
+        0 8px 24px rgba(0, 0, 0, 0.7) !important;
+
+    /* transition — Carbon easing curve */
+    --adw-button-transition:
+        box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1),
+        background 200ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+    /* fonts — IBM Plex Sans primary, Liberation fallback */
+    --adw-text-font-primary: "IBM Plex Sans" !important;
+    --adw-text-font-fallback: "Liberation Sans", Arial, Helvetica, sans-serif !important;
+    --adw-text-font-monospace-primary: "BlexMono Nerd Font" !important;
+    --adw-text-font-monospace-fallback: "IBM Plex Mono", "Liberation Mono", monospace !important;
 }

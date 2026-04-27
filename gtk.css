@@ -1,3 +1,16 @@
+    /* Carbon role variables */
+    @define-color carbon-bg          #161616;
+    @define-color carbon-layer-01    #262626;
+    @define-color carbon-fg          #f2f4f8;
+    @define-color carbon-fg-muted    #dde1e6;
+    @define-color carbon-dim         #525252;
+    @define-color carbon-interactive #78a9ff;
+    @define-color carbon-success     #42be65;
+    @define-color carbon-error       #ff7eb6;
+    @define-color carbon-warning     #ee5396;
+    @define-color carbon-teal        #3ddbd9;
+
+    /* ANSI slot aliases — used by widget rules below */
     @define-color background     #161616;
     @define-color foreground     #f2f4f8;
     @define-color black          #161616;
@@ -17,71 +30,72 @@
     @define-color bright_cyan    #82cfff;
     @define-color bright_white   #08bdba;
 
-    @define-color accent_bg_color @blue;
-    @define-color accent_fg_color @background;
-    @define-color accent_color @cyan;
+    /* GTK semantic role assignments — use Carbon roles, not ANSI names */
+    @define-color accent_bg_color @carbon-interactive;
+    @define-color accent_fg_color @carbon-bg;
+    @define-color accent_color    @carbon-interactive;
 
-    @define-color window_bg_color @background;
-    @define-color window_fg_color @foreground;
+    @define-color window_bg_color @carbon-bg;
+    @define-color window_fg_color @carbon-fg;
 
-    @define-color view_bg_color @black;
-    @define-color view_fg_color @foreground;
-    @define-color sidebar_bg_color @black;
-    @define-color sidebar_fg_color @foreground;
-    @define-color sidebar_backdrop_color @black;
-    @define-color sidebar_shade_color @black;
+    @define-color view_bg_color          @carbon-bg;
+    @define-color view_fg_color          @carbon-fg;
+    @define-color sidebar_bg_color       @carbon-bg;
+    @define-color sidebar_fg_color       @carbon-fg;
+    @define-color sidebar_backdrop_color @carbon-bg;
+    @define-color sidebar_shade_color    @carbon-bg;
 
-    @define-color headerbar_bg_color @background;
-    @define-color headerbar_fg_color @foreground;
-    @define-color headerbar_backdrop_color @black;
-    @define-color headerbar_shade_color @black;
-    @define-color card_bg_color @background;
-    @define-color card_fg_color @foreground;
+    @define-color headerbar_bg_color       @carbon-bg;
+    @define-color headerbar_fg_color       @carbon-fg;
+    @define-color headerbar_backdrop_color @carbon-bg;
+    @define-color headerbar_shade_color    @carbon-bg;
+    @define-color card_bg_color            @carbon-layer-01;
+    @define-color card_fg_color            @carbon-fg;
 
-    @define-color popover_bg_color @black;
-    @define-color popover_fg_color @foreground;
+    @define-color popover_bg_color @carbon-bg;
+    @define-color popover_fg_color @carbon-fg;
 
-    @define-color destructive_bg_color @red;
-    @define-color destructive_fg_color @background;
+    @define-color destructive_bg_color @carbon-error;
+    @define-color destructive_fg_color @carbon-bg;
 
-    @define-color success_bg_color @green;
-    @define-color success_fg_color @background;
+    @define-color success_bg_color @carbon-success;
+    @define-color success_fg_color @carbon-bg;
 
-    @define-color warning_bg_color @yellow;
-    @define-color warning_fg_color @background;
+    @define-color warning_bg_color @carbon-warning;
+    @define-color warning_fg_color @carbon-bg;
 
-    @define-color error_bg_color @red;
-    @define-color error_fg_color @background;
+    @define-color error_bg_color @carbon-error;
+    @define-color error_fg_color @carbon-bg;
 
-    @define-color dialog_bg_color @background;
-    @define-color dialog_fg_color @foreground;
+    @define-color dialog_bg_color @carbon-bg;
+    @define-color dialog_fg_color @carbon-fg;
 
-    @define-color borders alpha(@foreground, 0.1);
+    @define-color borders alpha(@carbon-dim, 0.3);
 
-    @define-color theme_fg_color @foreground;
-    @define-color theme_text_color @foreground;
-    @define-color theme_bg_color @background;
-    @define-color theme_base_color @black;
-    @define-color theme_selected_bg_color @blue;
-    @define-color theme_selected_fg_color @background;
-    @define-color insensitive_bg_color @background;
-    @define-color insensitive_fg_color @bright_black;
-    @define-color insensitive_base_color @black;
-    @define-color theme_unfocused_fg_color @foreground;
-    @define-color theme_unfocused_text_color @foreground;
-    @define-color theme_unfocused_bg_color @background;
-    @define-color theme_unfocused_base_color @black;
-    @define-color theme_unfocused_selected_bg_color @blue;
-    @define-color theme_unfocused_selected_fg_color @background;
-    @define-color unfocused_insensitive_color @bright_black;
-    @define-color unfocused_borders alpha(@foreground, 0.1);
-    @define-color warning_color @yellow;
-    @define-color error_color @red;
-    @define-color success_color @green;
-    @define-color destructive_color @red;
+    @define-color theme_fg_color                       @carbon-fg;
+    @define-color theme_text_color                     @carbon-fg;
+    @define-color theme_bg_color                       @carbon-bg;
+    @define-color theme_base_color                     @carbon-bg;
+    @define-color theme_selected_bg_color              @carbon-interactive;
+    @define-color theme_selected_fg_color              @carbon-bg;
+    @define-color insensitive_bg_color                 @carbon-bg;
+    @define-color insensitive_fg_color                 @carbon-dim;
+    @define-color insensitive_base_color               @carbon-bg;
+    @define-color theme_unfocused_fg_color             @carbon-fg;
+    @define-color theme_unfocused_text_color           @carbon-fg;
+    @define-color theme_unfocused_bg_color             @carbon-bg;
+    @define-color theme_unfocused_base_color           @carbon-bg;
+    @define-color theme_unfocused_selected_bg_color    @carbon-interactive;
+    @define-color theme_unfocused_selected_fg_color    @carbon-bg;
+    @define-color unfocused_insensitive_color          @carbon-dim;
+    @define-color unfocused_borders                    alpha(@carbon-dim, 0.3);
+    @define-color warning_color                        @carbon-warning;
+    @define-color error_color                          @carbon-error;
+    @define-color success_color                        @carbon-success;
+    @define-color destructive_color                    @carbon-error;
 
-    @define-color content_view_bg @black;
-    @define-color text_view_bg @black;
+    @define-color content_view_bg @carbon-bg;
+    @define-color text_view_bg    @carbon-bg;
 
     messagedialog {
         background-color: @dialog_bg_color;
@@ -99,20 +113,21 @@
     }
 
     messagedialog button {
-        background-color: @black;
-        color: @foreground;
-        border: 1px solid @bright_black;
+        background-color: @carbon-bg;
+        color: @carbon-fg;
+        border: 1px solid @carbon-dim;
         padding: 10px;
     }
 
     messagedialog button:hover {
-        background-color: @blue;
+        background-color: @carbon-interactive;
+        color: @carbon-bg;
     }
 
     banner revealer widget {
-        background: @bright_black;
+        background: @carbon-dim;
         padding: 5px;
-        color: @foreground;
+        color: @carbon-fg;
     }
 
     alertdialog.background {
@@ -134,15 +149,15 @@
     }
 
     filechooser .dialog-action-box {
-        border-top: 1px solid @bright_black;
+        border-top: 1px solid @carbon-dim;
     }
 
     filechooser .dialog-action-box:backdrop {
-        border-top-color: @black;
+        border-top-color: @carbon-bg;
     }
 
     filechooser #pathbarbox {
-        border-bottom: 1px solid @bright_black;
+        border-bottom: 1px solid @carbon-dim;
     }
 
     filechooserbutton:drop(active) {
@@ -151,16 +166,11 @@
     }
 
     toast {
-        background-color: @black;
-        color: @foreground;
+        background-color: @carbon-layer-01;
+        color: @carbon-fg;
     }
 
     toast button.circular.flat.image-button:hover {
-        color: @background;
-        background-color: @red;
+        color: @carbon-bg;
+        background-color: @carbon-error;
     }
-
-    /* .svg-icon {
-        filter: invert(79%) sepia(18%) saturate(611%) hue-rotate(192deg)
-            brightness(103%) contrast(94%);
-    } */

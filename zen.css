@@ -1,18 +1,18 @@
 :root {
 --color00: #161616;
---color01: #161616;
---color02: #161616;
---color03: #f2f4f8;
+--color01: #1c1c1c;
+--color02: #393939;
+--color03: #525252;
 --color04: #08bdba;
 --color05: #f2f4f8;
 --color06: #08bdba;
---color07: #08bdba;
+--color07: #78a9ff;
 --color08: #3ddbd9;
 --color09: #ee5396;
---color0A: #393939;
+--color0A: #42be65;
 --color0B: #33b1ff;
 --color0C: #ff7eb6;
---color0D: #42be65;
+--color0D: #78a9ff;
 --color0E: #be95ff;
 --color0F: #78a9ff;
 }

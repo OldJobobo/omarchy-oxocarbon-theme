@@ -19,7 +19,7 @@
             "ghost_element.hover": "#52525230",
             "ghost_element.selected": "#52525230",
             "ghost_element.active": "#52525260",
-            "border": "#161616",
+            "border": "#525252",
             "editor.highlighted_line.background": "#52525210",
             "editor.active_line.background": "#52525210",
             "panel.background": "#16161690",
@@ -27,18 +27,18 @@
             "title_bar.inactive_background": "#16161690",
             "status_bar.background": "#16161690",
             "drop_target.background": "#16161690",
-            "elevated_surface.background": "#161616",
+            "elevated_surface.background": "#262626",
             "toolbar.background": "#16161690",
             "tab_bar.background": "#16161690",
             "tab.inactive_background": "#16161690",
-            "tab.active_background": "#52525230",
+            "tab.active_background": "#26262660",
             "scrollbar.track.background": "transparent",
-            "scrollbar.track.border": "#161616",
-            "scrollbar.thumb.background": "#f2f4f8",
+            "scrollbar.track.border": "#525252",
+            "scrollbar.thumb.background": "#525252",
             "editor.gutter.background": "#16161690",
-            "terminal.background": "#16161610",
+            "terminal.background": "#161616",
             "terminal.foreground": "#f2f4f8",
-            "terminal.dim_foreground": "#f2f4f8",
+            "terminal.dim_foreground": "#dde1e6",
             "terminal.bright_foreground": "#f2f4f8",
             "terminal.ansi.black": "#161616",
             "terminal.ansi.red": "#3ddbd9",
@@ -50,8 +50,8 @@
             "terminal.ansi.white": "#f2f4f8",
             "terminal.ansi.bright_black": "#525252",
             "terminal.ansi.bright_red": "#78a9ff",
-            "terminal.ansi.bright_green": "#262626",
-            "terminal.ansi.bright_yellow": "#393939",
+            "terminal.ansi.bright_green": "#ff7eb6",
+            "terminal.ansi.bright_yellow": "#be95ff",
             "terminal.ansi.bright_blue": "#dde1e6",
             "terminal.ansi.bright_magenta": "#ffffff",
             "terminal.ansi.bright_cyan": "#82cfff",
@@ -71,7 +71,7 @@
                 "color": "#525252"
               },
               "constant": {
-                "color": "#262626"
+                "color": "#be95ff"
               },
               "function": {
                 "color": "#82cfff"
@@ -96,7 +96,7 @@
               {
                 "cursor": "#f2f4f8",
                 "background": "#161616",
-                "selection": "#f2f4f830"
+                "selection": "#78a9ff30"
               }
             ]
           }
