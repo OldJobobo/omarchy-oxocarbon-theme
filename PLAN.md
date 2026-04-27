@@ -4,19 +4,18 @@ This plan turns the `carbonized` branch into a fully Carbon-directed Omarchy the
 
 ## Phase 1 - Canonical Palette
 
-- Rewrite `colors.toml` as the canonical Carbon role map.
-- Preserve Oxocarbon identity where it helps: cyan, blue, green, magenta, and high-contrast dark neutrals.
-- Assign explicit semantic roles:
-  - focus / interactive
-  - success
-  - warning
-  - error
-  - info
-  - text primary
-  - text secondary
-  - border subtle
-  - border strong
-- Avoid letting ANSI color order drive UI meaning.
+- `colors.toml` is the canonical source. The Oxocarbon palette is not modified.
+- Carbon role mapping of the Oxocarbon palette for use in all downstream files:
+  - background: `#161616`
+  - text primary: `#f2f4f8`
+  - text secondary: `#dde1e6`
+  - border subtle / dim: `#525252`
+  - focus / interactive: `#78a9ff` / `#33b1ff`
+  - info / teal: `#3ddbd9` / `#08bdba`
+  - success: `#42be65`
+  - error / warning: `#ff7eb6` / `#ee5396` (Oxocarbon pink tones; no true yellow)
+  - purple accent: `#be95ff`
+  - accent: `#42be65`
 
 ## Phase 2 - Terminal And Shell Exports
 
@@ -67,8 +66,7 @@ This plan turns the `carbonized` branch into a fully Carbon-directed Omarchy the
 - Update `zen.css`.
 - Update `btop.theme`, `cava_theme`, `superfile.toml`, `zed.json`, and `vscode.json`.
 
-
-## Phase 7 - Validation
+## Phase 6 - Validation
 
 - Validate Lua:
   - `neovim.lua` parses.
@@ -84,6 +82,5 @@ This plan turns the `carbonized` branch into a fully Carbon-directed Omarchy the
   - GTK
   - Zen
   - Steam
-
-
-
+- Apply or symlink the branch as an Omarchy theme and run `omarchy-theme-set carbonized`.
+- Inspect terminals, Walker, Mako, SwayOSD, Hyprlock, Waybar, and Neovim.

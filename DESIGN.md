@@ -1,6 +1,6 @@
 # DESIGN - Carbonized
 
-Carbonized is an Omarchy theme that treats IBM Carbon Design as the source language and Oxocarbon as the editor-facing anchor. The goal is not to copy a web component library into a desktop theme. The goal is to translate Carbon's discipline into the surfaces Omarchy can actually control: palette, terminals, launcher, notifications, OSD, lockscreen, GTK chrome, Discord, and editor mappings.
+Carbonized is an Omarchy theme that treats IBM Carbon Design as the source language and Oxocarbon as the palette. The goal is not to copy a web component library into a desktop theme. The goal is to translate Carbon's discipline into the surfaces Omarchy can actually control: terminals, launcher, notifications, OSD, lockscreen, GTK chrome, Discord, and editor mappings.
 
 The interface should feel like a dark product system: exact, layered, readable, and quiet under load.
 
@@ -10,31 +10,31 @@ The interface should feel like a dark product system: exact, layered, readable, 
 - Layering is structural, not decorative: background, layer-01, layer-02, field, border.
 - Selection is shown with a left rail or focus outline, not bold text or glow.
 - Blue and cyan carry interaction and focus.
-- Green, yellow, and red keep their support roles: success, warning, error.
+- Green and pink keep their support roles: success and error/warning (Oxocarbon has no true yellow).
 - Motion is short and settled. Use `0.4, 0, 0.2, 1`; no bounce, spring, or looping spectacle.
 - Typography targets BlexMono Nerd Font for monospaced surfaces, IBM Plex Sans for UI text, and Liberation Sans as the final fallback before system sans.
 - UI density should be professional and scannable. No hero styling inside tool surfaces.
 
 ## Palette Model
 
-The canonical palette belongs in `colors.toml`. Every other file should derive from the same role map.
+The canonical palette is the Oxocarbon `colors.toml`. Every other file derives from it. Do not introduce colors not present in `colors.toml`.
 
-| Role | Target |
+| Role | Oxocarbon Value |
 | --- | --- |
-| Background | Carbon Gray 100 / near `#161616` |
-| Layer 01 | lifted dark surface, near `#262626` |
-| Layer 02 | stronger surface / field, near `#393939` |
-| Border subtle | gray divider, near `#393939` or `#525252` |
-| Border strong | focus edge, IBM blue or Oxocarbon cyan-blue |
-| Text primary | near `#f4f4f4` |
-| Text secondary | near `#c6c6c6` |
-| Focus / interactive | IBM blue `#0f62fe`, Oxocarbon blue/cyan as needed |
-| Info | `#78a9ff` / `#33b1ff` |
+| Background | `#161616` |
+| Layer 01 | `#262626` (not in toml — use inline) |
+| Layer 02 / field | `#393939` (not in toml — use inline) |
+| Border subtle / dim | `#525252` |
+| Text primary | `#f2f4f8` |
+| Text secondary | `#dde1e6` |
+| Focus / interactive | `#78a9ff` / `#33b1ff` |
+| Info / teal | `#3ddbd9` / `#08bdba` |
 | Success | `#42be65` |
-| Warning | `#f1c21b` |
-| Error | `#ff8389` |
+| Error / warning | `#ff7eb6` / `#ee5396` |
+| Purple accent | `#be95ff` |
+| Accent | `#42be65` |
 
-The current Oxocarbon palette is close enough to preserve as the theme's DNA, but the final mapping should be role-first rather than ANSI-first.
+Layer 01 and Layer 02 are not stored in `colors.toml` but are valid Oxocarbon surface values used inline in CSS and config files.
 
 ## Reference Themes
 
@@ -127,4 +127,3 @@ Keep the `oxocarbon.nvim` LazyVim fix unless exact token control becomes more im
 ## Out Of Scope
 
 Carbonized stays inside a normal Omarchy theme directory. It should not require shell architecture changes, AGS widget behavior changes, custom Waybar module logic, or global config edits outside the theme.
-
